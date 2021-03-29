@@ -1,0 +1,37 @@
+<!-- Toolbar -->
+<div class="content" role="main"> 
+
+    <h1><a class="header" routerLink="/">Das Transportproblem</a></h1>
+
+    <div class="card-container">
+        <!-- Button Nordweststreckenregel -->
+        <a class="card" id="nws" routerLink="/Nordwesteckenregel" (click)="setProcedure('nordwestEcken')" [class.active]="procedure === 'nordwestEcken'">
+        
+            <span><b>Nordwesteckenregel</b></span>
+        
+        </a>
+        
+        <!-- Button Spaltenminimumregel -->
+        <a class="card" id="spmin" routerLink="/Spaltenminimumregel" (click)="setProcedure('spaltenMinimum')" [class.active]="procedure === 'spaltenMinimum'">
+        
+            <span><b>Spaltenminimumregel</b></span>
+        
+        </a>
+        
+        <!-- Button Matrixminimumregel -->
+        <a class="card" id="mmin" routerLink="/Matrixminimumregel" (click)="setProcedure('matrixMinimum')" [class.active]="procedure === 'matrixMinimum'">
+        
+            <span><b>Matrixminimumregel</b></span>
+
+        </a>
+
+    </div>
+
+    <router-outlet></router-outlet>
+   
+    <!-- Fußzeile -->
+    <footer>
+        <p>©Created by FHWS-Students</p>
+    </footer>
+
+</div>

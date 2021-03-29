@@ -1,0 +1,99 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1{
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .content {
+    display: flex;
+    margin: 30px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*Formfaktoren der Button*/
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    list-style-type: none;
+  }
+
+  .card {
+    border-radius: 5px;
+    background-color: #323E4C;
+    box-shadow: 3px 3px 2px #AAA;
+    color: white;
+    height: auto;
+    width: auto;
+    margin: 0 10px 16px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 17px #AAA;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+  
+  /*Farbaspekte für die Button*/
+  a{
+    color: black;
+    background-color: #406984;
+    text-decoration: none;
+  }
+  a:hover{
+    background-color: #b0E0E6;
+    color: black;
+  }
+
+  .card.card-small:hover{
+    background-color: #b0E0E6;
+    color: black;
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+  }

@@ -1,0 +1,57 @@
+.matrix{
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+
+#matrixSize{
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 697px;
+}
+
+#matrix{
+  border-spacing: 5px;
+}
+
+#linedesign, #columndesign, #btn{
+  height: 30px;
+  width: 50px;
+  font-size: 15px;
+  margin: 30px 5px 10px 0;
+}
+
+#btn{
+  width: auto;
+  height: 30px;
+  width: auto;
+  font-size: 15
+  px;
+  margin: 30px 5px 10px 0;
+}
+
+#buttonview {
+    text-align: center;
+}
+
+#label{
+  height: auto;
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#InputField{
+  width : '45px';
+  height : '25px';
+  font-size : '18px';
+  text-align : 'center';
+}
+p{
+  text-align: center;
+  margin: 3px 0 2px 0;
+  color: grey;
+}
+#errormessagecostMatrix{
+color: orange;
+}

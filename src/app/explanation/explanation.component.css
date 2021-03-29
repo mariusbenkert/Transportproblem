@@ -1,0 +1,35 @@
+
+div#textfeld1{
+    display: none;
+}
+
+div#textfeld2{
+    display: none;
+}
+
+p{
+    background-color: #323E4C;
+    color: white;
+    border-radius: 5px;
+    padding:  2.5% 2.5% 2.5% 2.5%;
+    box-shadow: 3px 3px 2px #AAA;
+}
+
+a{
+    color: #00d6dde0;
+}
+
+#txtdefault{
+    text-align: center;
+}
+
+#Formel_img{
+    padding-left: 35%;
+    width: auto;
+    height: auto;
+}
+
+img{
+    height: 32px;
+    width: 32px;
+}

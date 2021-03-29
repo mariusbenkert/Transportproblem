@@ -1,0 +1,12 @@
+.matrix{
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+p{
+  text-align: center;
+  margin: 3px 0 2px 0;
+  color: grey;
+}

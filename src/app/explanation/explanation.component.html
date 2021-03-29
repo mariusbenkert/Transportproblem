@@ -1,0 +1,75 @@
+<!-- Textinhalt Erklärung -->
+<div  id = "txtoutput">
+
+  <p id= 'txt_nwv_expl'hidden >
+    <title>
+      <h2 id="nwv">Das Nord-West-Eckenverfahren</h2>
+    </title>
+    Das Nord-West-Ecken-Verfahren ist ein heuristisches Verfahren aus dem Operations Research, das eine zulässige
+    Ausgangslösung für das Transportproblem liefern soll. Von dieser Lösung aus startet der Optimierungsalgorithmus des
+    Transportproblems. <br> 
+    <br>
+    Der Name dieses Verfahrens ergibt sich aus seinem Vorgehen. Es schreitet im Transporttableau von links oben
+    (Nordwestecke) nach rechts unten (Südostecke) fort und ermittelt dabei Basisvariablen.<br>
+    <br>
+    Dabei schaut man von der oberen linken Ecke der Matrix ausgehend, ob man in dem aktuellen Feld eine Kapazität
+    ausschöpfen oder einen Bedarf befriedigen kann.<br>
+    <br>
+    <img id="Formel_img" src="../assets/Formel_NWV.png"> <br>
+    <br>
+    Wenn der Bedarf dieser Zeile gedeckt ist, sucht man in der Spalte abwärts nach dem nächsten Feld, bei dem eins der
+    beiden Kriterien erfüllt werden kann. Wurde die Kapazität der Spalte ausgeschöpft, dann sucht man in der Zeile weiter.
+    Wurde beides voll belegt, dann geht man ein Feld diagonal nach rechts unten weiter. <br>
+    <br>
+    Das Nord-West-Ecken-Verfahren liefert ein Ausgangstableau, das häufig sehr viele weitere Iterationen des
+    Lösungsalgorithmus bis zur optimalen Lösung erfordert.<br>
+    <br>
+    Quellen:<br>
+    <br>
+
+  <!--button um die Links bisschen schöner zu machen.-->
+    <a href="https://de.wikipedia.org/wiki/Nord-West-Ecken-Verfahren" ><img src="../assets/wikipedia.png"></a> Wikipedia<br>
+    <a href="https://www.grin.com/document/33956"><img src="../assets/link.png"/></a>Grin.com
+    
+  </p>  
+
+  <p id= 'txt_smv_expl' hidden>
+    <title id="Smv">Das Spaltenminimum-Verfahren</title>
+
+    Diese Methode ist ein Eröffnungsverfahren für das Transportproblem.<br>
+    Für diese Methode wird zusätzlich eine Kostenmatrix benötigt.<br>
+    <br>
+    Die Spalten (Nachfrager) des Transporttableaus werden in der gegebenen Reihenfolge zyklisch überprüft.<br>
+    Falls der Nachfrager noch Bedarf aufweist, wird die günstigste Transportverbindung von einem noch lieferfähigen Anbieter aus eingerichtet und die größtmögliche Transportmenge vorgesehen<br>
+    <br>
+    Quellen:<br>
+    <br>
+    <a href="http://www.wirtschaftslexikon24.com/d/spaltenminimum-methode/spaltenminimum-methode.htm">
+     <img src="../assets/link.png">
+</a> Wirtschaftslexikon24
+</p>
+
+<p id= 'txt_mmv_expl' hidden>
+    <title id="mmv">Das Matrixminimum-Verfahren</title>
+    Das Matrixminimumverfahren (oder aufsteigende Indexmethode, Rangfolgeverfahren) ist ein Eröffnungsverfahren aus dem Operations Research zur Lösung von Transportproblemen. Der Name leitet sich aus der Betrachtung der Kostenmatrix ab, in der das jeweilige Minimum für die nächste Iteration des Algorithmus herangezogen wird.<br>
+    <br>
+    Vorteile:
+    Aufgrund des einfachen Algorithmus, der nur die Transportkosten als Auswahlkriterium heranzieht, ist das Matrixminimumverfahren leicht anwend- und programmierbar. Zudem ist die Komplexität des Algorithmus vergleichsweise gering, was zu kurzen Rechenzeiten bei Computerprogrammen führt.<br>
+    <br>
+    Nachteile: 
+    Das Matrixminimumverfahren liefert zwar eine gültige Basislösung für das Transportproblem, jedoch nicht zwangsläufig die Optimallösung. Das bedeutet, dass eine nachfolgende Lösungsverbesserung notwendig werden kann, was den Aufwand zur Lösung des Problems mitunter erheblich erhöht.<br>
+    <br>
+    Anwedung: 
+    Als Eröffnungsheuristik ist das Matrixminimumverfahren insgesamt meist dann sinnvoll, wenn lediglich eine beliebige zulässige Lösung für ein Transportproblem benötigt wird. Daher findet es häufig Anwendung zur Ermittlung einer Ausgangslösung, bevor mit die Lösung beispielsweise mittels MODI-Methode oder Zyklenmethode (Stepping-Stone-Methode) optimiert wird.<br>
+    <br>
+    Quellen:<br>
+    <br>
+    <a href="https://de.wikipedia.org/wiki/Matrixminimumverfahren"><img src="../assets/wikipedia.png"></a> Wikipedia
+
+  </p>
+
+  <p id= 'txtdefault' hidden >
+  Sie haben kein Verfahren ausgewählt!
+   <img src="../assets/error.png">
+  </p>
+</div>

@@ -1,0 +1,24 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+ul{
+  padding-inline-start: 0%;
+}
+.fhwslogo{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 185px;
+  height: 10%;
+}
+@media screen and (max-width: 1000px) {
+
+.fhwslogo{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 142px;
+  height: 82px;
+}
+}

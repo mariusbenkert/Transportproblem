@@ -1,0 +1,62 @@
+<div id="results">
+    <div id="buttonview">
+    </div><br>
+    <div class="seperator" id="seperatorFirst"></div>
+    <div id="baseProcedureContainer" style="visibility: hidden;">
+        <h4 id='titleBase' style='text-align: center;'></h4>
+        <div class="matrix">
+            <button class="iconBtn" id="back" (click)="changeStepBase(-1)" [disabled]="(currentStepBase$ | async) === 0">
+            <i class="fa fas fa-chevron-left"></i>
+        </button>
+            <table style="height: auto; width: auto;" id="matrix">
+                <tbody id="outputTable">
+
+                </tbody>
+            </table>
+            <button class="iconBtn" id="forward" (click)="changeStepBase(1)" [disabled]="(currentStepBase$ | async) === basePathArray.length - 1">
+            <i class="fa fas fa-chevron-right"></i>
+        </button><br>
+        </div>
+        <div id="buttonview">
+            <div class="container">
+                <span class="dot" *ngFor="let step of basePathArray; let i = index" (click)="setStepBase(i)" [class.active]="(currentStepBase$ | async) === i"></span>
+            </div>
+            <button id="steppingStone" (click)="getSteppingStoneResult()">Weiter zum Stepping Stone Verfahren</button>
+        </div>
+        <div class="totalCostBase">
+            <h5>Gesamtkosten:</h5>
+            <p>{{totalCostBase}}</p>
+        </div>
+        <p id="steppingStoneErrors"></p>
+        <div class="seperator" id="seperatorSecond"></div>
+    </div>
+    <div id="steppingStoneContainer" style="visibility: hidden;">
+        <h4 id='titleSteppingStone' style='text-align: center;'>Ausgabe des Stepping Stone Verfahrens</h4>
+        <div class="matrix">
+            <button class="iconBtn" id="backSteppingStone" (click)="changeStepSteppingStone(-1)" [disabled]="(currentStepSteppingStone$ | async) === 0">
+            <i class="fa fas fa-chevron-left"></i>
+        </button>
+            <table style="height: auto; width: auto;" id="matrix">
+                <tbody id="steppingStoneOutput">
+
+                </tbody>
+            </table>
+            <button class="iconBtn" id="forwardSteppingStone" (click)="changeStepSteppingStone(1)" [disabled]="(currentStepSteppingStone$ | async) === steppingStonePathArray.length - 1">
+            <i class="fa fas fa-chevron-right"></i>
+        </button><br>
+        </div>
+        <div id="buttonview">
+            <div class="container">
+                <span class="dot" *ngFor="let step of steppingStonePathArray; let i = index" (click)="setStepSteppingStone(i)" [class.active]="(currentStepSteppingStone$ | async) === i"></span>
+            </div>
+        </div>
+        <div class="determinants">
+            <h5>Alle Determinanten:</h5>
+            <p *ngFor="let step of allDeterminants">{{step}}</p>
+        </div>
+        <div class="totalCostSteppingStone">
+            <h5>Gesamtkosten:</h5>
+            <p>{{totalCostSteppingStone}}</p>
+        </div>
+    </div>
+</div>

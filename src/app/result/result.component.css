@@ -1,0 +1,78 @@
+.matrix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.matrix #matrix {
+    margin: 0 20px 10px;
+}
+
+#btn,
+#back,
+#forward,
+#steppingStone {
+    height: 30px;
+    width: auto;
+    font-size: 15px;
+    margin: 30px 5px 10px 0;
+}
+#steppingStone{
+    margin-top: 25px;
+}
+
+.seperator {
+    height: 2px;
+    background: black;
+}
+
+#buttonview {
+    text-align: center;
+    /* margin-top: 10px; */
+}
+
+.iconBtn {
+    appearance: none;
+    /* color: #323E4C; */
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:disabled.iconBtn {
+    cursor: not-allowed;
+}
+
+.iconBtn > i {
+    font-size: 28px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #323E4Ced;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #ee750d;
+}
+
+.determinants {
+    /* styling */
+}
+
+.totalCost {
+    /* styling */
+}
+#steppingStoneErrors{
+    text-align: center;
+    color: orange;
+}

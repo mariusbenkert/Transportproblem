@@ -1,0 +1,40 @@
+<!-- Matrixerstellung -->
+<div id="matrixSize">
+  <label for="line" id="label"><b>Legen sie die Größe der Matrix fest:</b></label>
+  &nbsp;
+
+  <!-- Dropdownmenü für Zeilenlänge der Matrix -->
+  <select [(ngModel)]="linecount" (change)="updateLine($event.target.value)" id="linedesign">
+    <option [value]="item.id" *ngFor="let item of lineitems">{{item.name}}</option>
+  </select>
+
+  <!-- Dropdownmenü für Spaltenlänge der Matrix -->
+  <select [(ngModel)]='columncount' (change)="updateColumn($event.target.value)" id="columndesign">
+    <option [value]="item.id" *ngFor="let item of columnitems">{{item.name}}</option>
+  </select>
+  
+  <!-- <button type="button" routerLink="/output" id="btn">Output</button> -->
+</div>
+<!-- Tabellenkonstrukt -->
+<div class="matrix">
+  <table style="height: auto; width: auto;" id="matrix">
+    <tbody id="inputTable">
+      
+    </tbody>
+  </table>
+</div>
+<p id="errormessagenoPath"></p>
+<p id="errormessagecostMatrix"></p>
+<p id="errormessageoffer"></p>
+<p id="errormessagedemand"></p>
+<!-- Button für erstellung der Matrix -->
+<div id="buttonview">
+    <button type="button" (click)="start()" id="btn">Komplettlösung</button>
+</div>
+
+
+<!-- Button zur Schritt-für-Schritt-Lösung-->
+<!-- <button type="button" id="btn">Einzellösung</button> -->
+<script></script>
+
+<app-result></app-result><br>
